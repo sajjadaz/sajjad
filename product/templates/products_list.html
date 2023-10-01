@@ -1,0 +1,255 @@
+{% load static %}
+
+{% include 'home/include/head.html' %}
+{% include 'home/include/top_bar.html' %}
+{% include 'home/include/nav_bar.html' %}
+
+<div class="container-fluid">
+    <div class="row px-xl-5">
+        <!-- Shop Sidebar Start -->
+        <div class="col-lg-3 col-md-4">
+            <!-- Price Start -->
+            <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Filter by price</span>
+            </h5>
+            <form method="get">
+                <div class="bg-light p-4 mb-30">
+
+                    <div>
+                        <label for="price-all">MIN Price</label>
+                        <input type="number" name="min_price" id="price-all">
+                    </div>
+                    <div>
+                        <label for="price-all" class="mt-3 mb-1">MAX Price</label>
+                        <input type="number" name="max_price" id="price-all">
+                    </div>
+
+                </div>
+                <!-- Price End -->
+
+                <!-- Color Start -->
+                <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Filter by color</span>
+                </h5>
+                <div class="bg-light p-4 mb-30">
+
+
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" name="color" value="Black" id="color-1">
+                        <label class="custom-control-label" for="color-1">Black</label>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" name="color" value="White" id="color-2">
+                        <label class="custom-control-label" for="color-2">White</label>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" name="color" value="Red" id="color-3">
+                        <label class="custom-control-label" for="color-3">Red</label>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" name="color" value="Blue" id="color-4">
+                        <label class="custom-control-label" for="color-4">Blue</label>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between">
+                        <input type="checkbox" class="custom-control-input" name="color" value="Green" id="color-5">
+                        <label class="custom-control-label" for="color-5">Green</label>
+                    </div>
+
+                </div>
+                <!-- Color End -->
+
+                <!-- Size Start -->
+                <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Filter by size</span>
+                </h5>
+                <div class="bg-light p-4 mb-30">
+
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" name="size" value="XS" id="size-1">
+                        <label class="custom-control-label" for="size-1">XS</label>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" name="size" value="S" id="size-2">
+                        <label class="custom-control-label" for="size-2">S</label>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" name="size" value="M" id="size-3">
+                        <label class="custom-control-label" for="size-3">M</label>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                        <input type="checkbox" class="custom-control-input" name="size" value="L" id="size-4">
+                        <label class="custom-control-label" for="size-4">L</label>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between">
+                        <input type="checkbox" class="custom-control-input" name="size" value="XL" id="size-5">
+                        <label class="custom-control-label" for="size-5">XL</label>
+                    </div>
+                    <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mt-3">
+                        <input type="checkbox" class="custom-control-input" name="size" value="XXL" id="size-6">
+                        <label class="custom-control-label" for="size-6">XXL</label>
+                    </div>
+
+                </div>
+                <div class="mihanwp-box">
+                    <h5 class="section-title position-relative text-uppercase mb-3 "><span class="bg-secondary pr-3">Filter by number size</span>
+                    </h5>
+                    <div class="bg-light p-4 mb-30">
+
+                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                            <input type="checkbox" class="custom-control-input" name="size" value="36" id="size-7">
+                            <label class="custom-control-label" for="size-7">36</label>
+                        </div>
+                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                            <input type="checkbox" class="custom-control-input" name="size" value="37" id="size-8">
+                            <label class="custom-control-label" for="size-8">37</label>
+                        </div>
+                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                            <input type="checkbox" class="custom-control-input" name="size" value="38" id="size-9">
+                            <label class="custom-control-label" for="size-9">38</label>
+                        </div>
+                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+                            <input type="checkbox" class="custom-control-input" name="size" value="39" id="size-10">
+                            <label class="custom-control-label" for="size-10">39</label>
+                        </div>
+                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between">
+                            <input type="checkbox" class="custom-control-input" name="size" value="40" id="size-11">
+                            <label class="custom-control-label" for="size-11">40</label>
+                        </div>
+                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mt-3">
+                            <input type="checkbox" class="custom-control-input" name="size" value="41" id="size-12">
+                            <label class="custom-control-label" for="size-12">41</label>
+                        </div>
+                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mt-3">
+                            <input type="checkbox" class="custom-control-input" name="size" value="42" id="size-13">
+                            <label class="custom-control-label" for="size-13">42</label>
+                        </div>
+                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mt-3">
+                            <input type="checkbox" class="custom-control-input" name="size" value="43" id="size-14">
+                            <label class="custom-control-label" for="size-14">43</label>
+                        </div>
+                        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mt-3">
+                            <input type="checkbox" class="custom-control-input" name="size" value="44" id="size-15">
+                            <label class="custom-control-label" for="size-15">44</label>
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <center><input type="submit" value="Apply Filters" class="btn-primary"></center>
+            </form>
+            <!-- Size End -->
+        </div>
+        <!-- Shop Sidebar End -->
+
+
+        <!-- Shop Product Start -->
+        <div class="col-lg-9 col-md-8">
+            <div class="row pb-3">
+                <div class="col-12 pb-1">
+    <div class="d-flex align-items-center justify-content-between mb-4">
+        <div>
+            <button class="btn btn-sm btn-light"><i class="fa fa-th-large"></i></button>
+            <button class="btn btn-sm btn-light ml-2"><i class="fa fa-bars"></i></button>
+        </div>
+        <div class="ml-2">
+            <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">
+                    Sorting
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="?sort=latest">Latest</a>
+                    <a class="dropdown-item" href="?sort=best_rating">Best Rating</a>
+                </div>
+            </div>
+            <div class="btn-group ml-2">
+                <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">
+                    Showing
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <a class="dropdown-item" href="?show=10">10</a>
+                    <a class="dropdown-item" href="?show=20">20</a>
+                    <a class="dropdown-item" href="?show=30">30</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                {% for product in object_list %}
+                    <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
+                        <div class="product-item bg-light mb-4">
+                            <div class="product-img position-relative overflow-hidden">
+                                <img class="img-fluid w-100 h-50" src="{{ product.images.first.image.url }}" alt="hi">
+                                <div class="product-action">
+
+                                    <a class="btn btn-outline-dark btn-square"
+                                       href="{% url 'product:product_detail' product.id %}"><i class="fa fa-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center py-4">
+                                <a class="h6 text-decoration-none text-truncate" href="">{{ product.title }}</a>
+                                <div class="d-flex align-items-center justify-content-center mt-2">
+                                    <h5>${{ product.discount }}</h5>
+                                    <h6 class="text-muted ml-2">
+                                        <del>${{ product.price }}</del>
+                                    </h6>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                <hr>
+                {% for product in feature %}
+                    <div class="col-lg-4 col-md-6 col-sm-6 pb-1">
+                        <div class="product-item bg-light mb-4">
+                            <div class="product-img position-relative overflow-hidden">
+                                <img class="img-fluid w-100 h-50" src="{{ product.images.first.image.url }}" alt="hi">
+                                <div class="product-action">
+                                    <a class="btn btn-outline-dark btn-square" href=""><i
+                                            class="fa fa-shopping-cart"></i></a>
+                                    <a class="btn btn-outline-dark btn-square"
+                                       href="{% url 'product:product_detail' product.id %}"><i class="fa fa-search"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center py-4">
+                                <a class="h6 text-decoration-none text-truncate" href="">{{ product.title }}</a>
+                                <div class="d-flex align-items-center justify-content-center mt-2">
+                                    <h5>${{ product.price }}{{ product.discount }}</h5>
+                                    <h6 class="text-muted ml-2">
+                                        <del>${{ product.price }}</del>
+                                    </h6>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                <div class="col-12">
+                    <nav>
+                        {% if object_list.has_other_pages %}
+                            <ul class="pagination justify-content-center">
+                                {% if object_list.has_previous %}
+                                    <li class="page-item"><a class="page-link" href="?page={{ object_list.previous_page_number }}">Previous</a></li>
+                                {% endif %}
+                                {% for i in object_list.paginator.page_range %}
+                                    {% if object_list.number == i %}
+                                        <li class="page-item active"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                                    {% else %}
+                                        <li class="page-item "><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+
+                                    {% endif %}
+                                {% endfor %}
+                                {% if object_list.has_next %}
+                                    <li class="page-item"><a class="page-link" href="?page={{ object_list.next_page_number }}">Next</a></li>
+                                {% endif %}
+                            </ul>
+                        {% endif %}
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Shop Product End -->
+    </div>
+</div>
+
+{% include 'home/include/footer.html' %}
+{% include 'home/include/js.html' %}

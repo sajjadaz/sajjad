@@ -1,0 +1,49 @@
+{% load static %}
+{% load render_partial %}
+<!DOCTYPE html>
+<html lang="en">
+{% include 'home/include/head.html' %}
+<body>
+<!-- Topbar Start -->
+{% include 'home/include/top_bar.html' %}
+<!-- Topbar End -->
+
+
+<!-- Navbar Start -->
+{% render_partial 'product:navbar' %}
+<!-- Navbar End -->
+   <center><h2 class="mb-4">Liked by {{ request.user.username }}</h2></center>
+
+<div class="container mt-5">
+
+    <div class="row">
+        <!-- Product 1 -->
+
+        <hr>
+
+        {% for like in all_like %}
+
+            <div class="col-md-3 mb-4">
+                <div class="card">
+                    <img src="{{ like.product.images.first.image.url}}" class="card-img-top" height="200px" width="35px" alt="hi">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ like.title }}</h5>
+                        <p class="card-text">{{ like.description }}</p>
+                        <a href="#" class="btn btn-primary">{{ like.product.price }}</a>
+                        <a href="#" class="btn btn-primary">{{ like.product.discount }}</a>
+                        <a href="" class="btn btn-primary">add to cart</a>
+                    </div>
+                </div>
+            </div>
+
+{#            {% cycle '' '' '' '</div><div class="row">' %}#}
+        {% empty %}
+            <h1><p>محصولی یافت نشد</p></h1>
+        {% endfor %}
+    </div>
+</div>
+</body>
+{% include 'home/include/footer.html' %}
+{% include 'home/include/js.html' %}
+
+</html>

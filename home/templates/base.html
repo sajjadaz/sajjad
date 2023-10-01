@@ -1,0 +1,69 @@
+{% load static %}
+{% load render_partial %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include 'home/include/head.html' %}
+</head>
+
+<body>
+<!-- Topbar Start -->
+{% include 'home/include/top_bar.html' %}
+<!-- Topbar End -->
+
+
+<!-- Navbar Start -->
+{% render_partial 'product:navbar' %}
+<!-- Navbar End -->
+
+
+<!-- Carousel Start -->
+{% render_partial 'product:offer_brand' %}
+<!-- Carousel End -->
+
+
+<!-- Featured Start -->
+{% include 'home/include/featured.html' %}
+<!-- Featured End -->
+
+
+<!-- Categories Start -->
+{% render_partial 'product:cat' %}
+<!-- Categories End -->
+
+
+<!-- Products Start -->
+{% render_partial 'product:Feature' %}
+<!-- Products End -->
+
+
+<!-- Offer Start -->
+{% render_partial 'product:offer' %}
+<!-- Offer End -->
+
+
+<!-- Products Start -->
+{% render_partial 'product:recent' %}
+<!-- Products End -->
+
+
+<!-- Vendor Start -->
+{% render_partial 'product:brande' %}
+<!-- Vendor End -->
+
+
+<!-- Footer Start -->
+{% include 'home/include/footer.html' %}
+<!-- Footer End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+<!-- JavaScript Libraries -->
+{% include 'home/include/js.html' %}
+</body>
+
+</html>

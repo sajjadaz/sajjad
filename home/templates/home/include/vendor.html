@@ -1,0 +1,14 @@
+{% load static %}
+    <div class="container-fluid py-5">
+        <div class="row px-xl-5">
+            <div class="col">
+                <div class="owl-carousel vendor-carousel">
+                    {% for brande in all_brand %}
+                    <div class="bg-light p-4">
+                        <img src="{{brande.image.url}}" alt="">
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>

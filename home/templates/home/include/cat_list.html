@@ -1,0 +1,49 @@
+{% load static %}
+{% load render_partial %}
+<!DOCTYPE html>
+<html lang="en">
+{% include 'home/include/head.html' %}
+<body>
+<!-- Topbar Start -->
+{% include 'home/include/top_bar.html' %}
+<!-- Topbar End -->
+
+
+<!-- Navbar Start -->
+{% render_partial 'product:navbar' %}
+<!-- Navbar End -->
+
+<div class="container mt-5">
+    <div class="container mt-5">
+        {% if cat_list %}
+            <div class="row">
+                {% for product in cat_list %}
+                    <div class="col-md-3 mb-4">
+                        <div class="card">
+                            <img src="{{ product.images.first.image.url }}" class="card-img-top" height="200px" width="35px" alt="hi">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ product.title }}</h5>
+                                <p class="card-text">Description: {{ product.description }}</p>
+                                <p class="card-text">Price: {{ product.price }}</p>
+                                <p class="card-text">Discount: {{ product.discount }}%</p>
+                                <!-- اینجا می‌توانید دکمه‌ها یا لینک‌های دلخواه خود را اضافه کنید -->
+                                <a href="#" class="btn btn-primary">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <!-- اگر زیردسته‌ای وجود نداشته باشد، این پیام نمایش داده می‌شود -->
+           <center> <h1>محصولی در این دسته بندی نیست</h1></center>
+        {% endif %}
+    </div>
+</div>
+
+
+</div>
+</body>
+{% include 'home/include/footer.html' %}
+{% include 'home/include/js.html' %}
+
+</html>

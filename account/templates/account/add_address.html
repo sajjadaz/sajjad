@@ -1,0 +1,95 @@
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include 'home/include/head.html' %}
+</head>
+
+<body>
+{% include 'home/include/top_bar.html' %}
+<!-- Topbar End -->
+
+
+<!-- Navbar Start -->
+{% include 'home/include/nav_bar.html' %}
+<!-- Navbar End -->
+
+
+<!-- Breadcrumb Start -->
+<div class="container-fluid">
+    <div class="row px-xl-5">
+        <div class="col-12">
+            <nav class="breadcrumb bg-light mb-30">
+                <a class="breadcrumb-item text-dark" href="#">Home</a>
+                <a class="breadcrumb-item text-dark" href="#">Shop</a>
+                <span class="breadcrumb-item active">Checkout</span>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb End -->
+
+
+<!-- Checkout Start -->
+<div class="container-fluid">
+    <div class="mr-auto">
+        <div class="">
+            <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Billing Address</span>
+            </h5>
+            <div class="bg-light p-30 mb-5">
+                <form method="post">
+                    <div class="row">
+
+                        {% csrf_token %}
+                        <div class="col-md-6 form-group">
+                            <label>First Name</label>
+                            {{ form.first_name|attr:'class: form-control' }}
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Last Name</label>
+                            {{ form.last_name|attr:'class: form-control' }}
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Phone number</label>
+                            {{ form.phone|attr:'class: form-control' }}
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Address</label>
+                            {{ form.address|attr:'class: form-control' }}
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Postal Code</label>
+                            {{ form.postal_code|attr:'class: form-control' }}
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label>Email Address</label>
+                            {{ form.email|attr:'class: form-control' }}
+                        </div>
+                        <button type="submit" class="form-control btn btn-primary">Send</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Checkout End -->
+
+
+<!-- Footer Start -->
+{% include 'home/include/footer.html' %}
+<!-- Footer End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+<!-- JavaScript Libraries -->
+{% include 'home/include/js.html' %}
+</body>
+
+</html>

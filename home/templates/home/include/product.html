@@ -1,0 +1,37 @@
+{% load static %}
+{#{% include 'home/include/head.html' %}#}
+{#{% include 'home/include/top_bar.html' %}#}
+{#{% include 'home/include/nav_bar.html' %}#}
+
+
+<div class="container-fluid pt-5 pb-3">
+    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Featured Products</span>
+    </h2>
+    <div class="row px-xl-5">
+        {% for feature in feature %}
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <div class="product-item bg-light mb-4">
+                    <div class="product-img position-relative overflow-hidden" style="width: 350px; height: 350px;">
+                        <img class="img-fluid w-100" src="{{ feature.image.url }}" alt="">
+{#                        <div class="product-action">#}
+{#                            <a class="btn btn-outline-dark btn-square" href="{% url 'product:feature_detail' feature.id %}"><i class="fa fa-search"></i></a>#}
+{##}
+{#                        </div>#}
+                    </div>
+                    <div class="text-center py-4">
+                        <a class="h6 text-decoration-none text-truncate" href="">{{ feature.title }}</a>
+                        <div class="d-flex align-items-center justify-content-center mt-2">
+                            <h5>{{ feature.price }}</h5>
+                            <h6 class="text-muted ml-2">
+{#                                <del>{{ feature.price }}</del>#}
+                            </h6>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{#{% include 'home/include/footer.html' %}#}
+{#{% include 'home/include/js.html' %}#}
